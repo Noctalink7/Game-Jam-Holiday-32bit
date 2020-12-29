@@ -6,7 +6,6 @@ using UnityEngine;
 public class LoseLifeTmp : MonoBehaviour
 {
     public FloatValue health;
-    public Slider healthBar;
 
     void OnMouseDown()
     {

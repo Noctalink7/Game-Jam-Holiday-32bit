@@ -340,7 +340,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -190, y: -90}
+  m_AnchoredPosition: {x: -150, y: -80}
   m_SizeDelta: {x: 90, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &513700125
@@ -555,7 +555,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 190, y: -90}
+  m_AnchoredPosition: {x: 150, y: -80}
   m_SizeDelta: {x: 90, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &629985631
@@ -753,11 +753,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 868422213}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9211051fd1a4ada4db831d947f6594cd, type: 3}
+  m_Script: {fileID: 11500000, guid: 64aba29c7b9c1b44cb1ba560366b3bf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 11400000, guid: f0af0966550d62b4a928730a18c85550, type: 2}
-  healthBar: {fileID: 1116840145}
+  killerDuck: {fileID: 868422213}
+  bar: {fileID: 1898439210}
 --- !u!61 &868422215
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -822,7 +823,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 8868729072188591806, guid: 7b11fa0c21aad9d4795bb371c4364e86,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -885,7 +886,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -150, y: -140}
+  m_AnchoredPosition: {x: 0, y: -110}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1116840145
@@ -1453,4 +1454,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bar: {fileID: 1898439210}
-  time: 10
