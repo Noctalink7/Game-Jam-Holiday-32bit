@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DuckKiller : MonoBehaviour
 {
@@ -13,30 +14,37 @@ public class DuckKiller : MonoBehaviour
     public Text score;
     public AudioSource hurt;
     private float time;
+    private int second = 1;
+    private float starTime;
 
     // Start is called before the first frame update
     void Start()
     {
         life = 7;
+        time = 0;
+        starTime = Time.time;
     }
 
     // Update is called once per frame
     void Update()
     {
-        time = Time.time;
-     //   Debug.Log(time);
-        score.text = "Time survive : " + Mathf.FloorToInt(Time.time);
-        if (Time.time >= nextUpdate)
+        if (Time.time-starTime >= second) {
+            time += 1;
+       //     Debug.Log(time);
+            second = Mathf.FloorToInt(Time.time - starTime) + 1;
+        }
+        score.text = "Time survive : " + Mathf.FloorToInt(Time.time - starTime);
+        if (Time.time - starTime >= nextUpdate)
         {
 //            Debug.Log(Time.time + ">=" + nextUpdate);
-            nextUpdate = Mathf.FloorToInt(Time.time) + 7;
+            nextUpdate = Mathf.FloorToInt(Time.time - starTime) + 7;
             killerDuck.transform.position = new Vector3(Random.Range(-23, 23), Random.Range(-4, 4), 0);
             GetComponent<AudioSource>().Play();
             loseHealth();
         }
         if (health.currentValue <= 0 || time > 20)
         {
-            Debug.Log("Game over");
+            SceneManager.LoadScene("gameover");
         }
     }
 

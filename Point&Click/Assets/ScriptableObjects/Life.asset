@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Life
   m_EditorClassIdentifier: 
   initialValue: 100
-  currentValue: 100
+  currentValue: 0

@@ -12,7 +12,7 @@ public class MoveCamRight : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
     {
         if (ispressed)
         {
-            if (cam.transform.position.x < 16)
+            if (cam.transform.position.x < 14)
                 cam.transform.Translate(0.2f, 0, 0);
         }
     }
