@@ -13,7 +13,7 @@ public class TimeBar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        scaleChange = new Vector3(-0.01f, 0, 0);
+        scaleChange = new Vector3(-0.07f, 0, 0);
         //AnimateBar();
     }
 

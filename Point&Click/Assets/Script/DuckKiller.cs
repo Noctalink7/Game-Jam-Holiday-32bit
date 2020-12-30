@@ -9,7 +9,7 @@ public class DuckKiller : MonoBehaviour
     private int life;
     public GameObject killerDuck;
     public GameObject bar;
-    private int nextUpdate = 10;
+    private int nextUpdate = 7;
     public Text score;
     public AudioSource hurt;
     private float time;
@@ -17,7 +17,7 @@ public class DuckKiller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        life = 10;
+        life = 7;
     }
 
     // Update is called once per frame
@@ -29,12 +29,12 @@ public class DuckKiller : MonoBehaviour
         if (Time.time >= nextUpdate)
         {
 //            Debug.Log(Time.time + ">=" + nextUpdate);
-            nextUpdate = Mathf.FloorToInt(Time.time) + 10;
+            nextUpdate = Mathf.FloorToInt(Time.time) + 7;
             killerDuck.transform.position = new Vector3(Random.Range(-23, 23), Random.Range(-4, 4), 0);
             GetComponent<AudioSource>().Play();
             loseHealth();
         }
-        if (health.currentValue <= 0 || time > 60)
+        if (health.currentValue <= 0 || time > 20)
         {
             Debug.Log("Game over");
         }
@@ -53,7 +53,7 @@ public class DuckKiller : MonoBehaviour
         {
             bar.transform.localScale = new Vector3(0, 1, 1);
             time = 0;
-            life = 10;
+            life = 7;
         }
         nextUpdate += 1;
         killerDuck.transform.position = new Vector3(Random.Range(-23, 23), Random.Range(-4, 4), 0);
